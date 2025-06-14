@@ -5,20 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, feat/* ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
-  inputs:
-      environnement:
-        description: 'Deployment environment'
-        required: true
-        default: 'develop'
-        type: choice
-        options:
-          - develop
-          - staging
-          - production
      
 jobs:
   build:
